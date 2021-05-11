@@ -23,7 +23,6 @@ function nextTick(prevState) {
     timeRemaining,
   };
 }
-
 /**
  * Higher order function that returns a function to update the session state with the next session type upon timeout.
  * @param focusDuration
@@ -60,11 +59,6 @@ function Pomodoro() {
   // ToDo: Allow the user to adjust the focus and break duration.
   const [focusDuration, setFocus] = useState(60 * 25);
   const [breakDuration, setBreak] = useState(60 * 5);
-
-
-
- 
-
   /**
    * Custom hook that invokes the callback function every second
    *
@@ -79,10 +73,7 @@ function Pomodoro() {
     },
     isTimerRunning ? 1000 : null
   );
-
-  /**
-   * Called whenever the play/pause button is clicked.
-   */
+  /*Called whenever the play/pause button is clicked.*/
   function playPause() {
     setIsTimerRunning((prevState) => {
       //console.log(prevState);
@@ -104,9 +95,6 @@ function Pomodoro() {
       return nextState;
     });
   }
-
-
-
   return (
     <div className="pomodoro">
       <TimerAdjust minutesToDuration={minutesToDuration} session={session} setFocus = {setFocus} setBreak = {setBreak} focusDuration={focusDuration} breakDuration={breakDuration} setSession = {setSession}/>

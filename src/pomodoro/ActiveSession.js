@@ -14,8 +14,6 @@ function ActiveSession({session, secondsToDuration, focusDuration, breakDuration
 
         let currentValue = 0;
         currentValue = 100 - ((session.timeRemaining/ focusOrBreak) * 100);
-        console.log(currentValue);
-        //console.log(session.timeRemaining / -focusOrBreak);
          return (<div>
         {/* TODO: This area should show only when there is an active focus or break - i.e. the session is running or is paused */}
         <div className="row mb-2">

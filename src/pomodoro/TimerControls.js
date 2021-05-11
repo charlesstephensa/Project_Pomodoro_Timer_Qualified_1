@@ -1,7 +1,9 @@
 import React from "react"
 
 
-function TimerControls({playPause, isTimerRunning, session, classNames, setSession, setIsTimerRunning}){
+function TimerControls({ isTimerRunning, session, classNames, setSession, setIsTimerRunning, playPause}){
+
+
 
     const stopHandler = () =>{
         if(session != null){
